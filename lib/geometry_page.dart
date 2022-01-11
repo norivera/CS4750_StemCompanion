@@ -11,58 +11,50 @@ class GeometryPage extends StatefulWidget {
 }
 
 class _GeometryPageState extends State<GeometryPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-/*    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) =>  const MyThirdPage(title: 'Page No. 3')),
-    );*/
-
-  }
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
 
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'App Logo - Screen No. 2',
+          title: Text(widget.title),
+        ),
+        body: ListView(
+          padding: const EdgeInsets.all(10),
+          children: [
+            ListTile(
+              title: Container(
+                height: 50,
+                color: Colors.amber[600],
+                child: const Center(child: Text('Linear')),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+              },
             ),
-            const Text(
-              'My Demo App 2 - Screen No. 2',
+            ListTile(
+              title: Container(
+                height: 50,
+                color: Colors.amber[500],
+                child: const Center(child: Text('Quadratic')),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+              },
             ),
-            const Text(
-              'Login First Please',
-            ),
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            ListTile(
+              title: Container(
+                height: 50,
+                color: Colors.amber[100],
+                child: const Center(child: Text('Cubic')),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+              },
             ),
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        )
     );
   }
 }
