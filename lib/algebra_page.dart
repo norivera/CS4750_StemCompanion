@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:steam_companion/cubic_info.dart';
+import 'package:steam_companion/quadratic_info.dart';
 import './linear_info.dart';
 
 
@@ -31,7 +33,7 @@ class _AlgebraPageState extends State<AlgebraPage> {
                 child: const Center(child: Text('Linear')),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear Functions')));
               },
             ),
             ListTile(
@@ -41,7 +43,7 @@ class _AlgebraPageState extends State<AlgebraPage> {
                 child: const Center(child: Text('Quadratic')),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const QuadraticPage(title: 'Subject: Quadratic Functions')));
               },
             ),
             ListTile(
@@ -51,7 +53,7 @@ class _AlgebraPageState extends State<AlgebraPage> {
                 child: const Center(child: Text('Cubic')),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CubicPage(title: 'Subject: Cubic Functions')));
               },
             ),
           ],
