@@ -15,40 +15,123 @@ class _QuadraticPageState extends State<QuadraticPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
 
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'App Logo - Screen No. 2',
+          title: Text(widget.title),
+        ),
+        body: ListView(
+          padding: const EdgeInsets.all(10),
+          children: [
+            ListTile(
+                title: Image.asset('asset/quadratic-function.png',
+                    height: 300,
+                    width: 100,
+                    fit: BoxFit.cover),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const DetailScreen();
+                  }));
+                }
             ),
-            const Text(
-              'My Demo App 2 - Screen No. 2',
+            ListTile(
+                title: Image.asset('asset/quadratic_set.png',
+                    height: 300,
+                    width: 100,
+                    fit: BoxFit.cover),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const DetailScreen3();
+                  }));
+                }
             ),
-            const Text(
-              'Login First Please',
+            ListTile(
+                title: Image.asset('asset/quadratic-formula.png',
+                    height: 300,
+                    width: 100,
+                    fit: BoxFit.cover),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const DetailScreen4();
+                  }));
+                }
             ),
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            const ListTile(
+              title: SizedBox(
+                height: 50,
+                child: Center(child: Text('Click on each image to enlarge them. Tap on the image to exit',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                ),
+              ),
             ),
           ],
+        )
+    );
+  }
+}
+
+class DetailScreen extends StatelessWidget
+{
+  const DetailScreen({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image.asset(
+              'asset/quadratic-function.png',
+            ),
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+class DetailScreen3 extends StatelessWidget
+{
+  const DetailScreen3({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image.asset(
+              'asset/quadratic_set.png',
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+class DetailScreen4 extends StatelessWidget
+{
+  const DetailScreen4({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image.asset(
+              'asset/quadratic-formula.png',
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
