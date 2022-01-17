@@ -11,20 +11,6 @@ class QuadraticPage extends StatefulWidget {
 }
 
 class _QuadraticPageState extends State<QuadraticPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-/*    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) =>  const MyThirdPage(title: 'Page No. 3')),
-    );*/
-
-  }
-
   @override
   Widget build(BuildContext context) {
 
