@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 
-class GeometryPage extends StatefulWidget {
-  const GeometryPage({Key? key, required this.title}) : super(key: key);
+class PrecalculusPage extends StatefulWidget {
+  const PrecalculusPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _GeometryPageState createState() => _GeometryPageState();
+  _PrecalculusPageState createState() => _PrecalculusPageState();
 }
 
-class _GeometryPageState extends State<GeometryPage> {
+class _PrecalculusPageState extends State<PrecalculusPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class _GeometryPageState extends State<GeometryPage> {
             ListTile(
               title: Container(
                 height: 50,
-                color: Colors.amber[700],
-                child: const Center(child: Text('Triangles')),
+                color: Colors.amber[600],
+                child: const Center(child: Text('Linear')),
               ),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
@@ -36,15 +36,8 @@ class _GeometryPageState extends State<GeometryPage> {
             ListTile(
               title: Container(
                 height: 50,
-                color: Colors.amber[600],
-                child: const Center(child: Text('Special Right Triangles and Pythagorean'))
-              ),
-            ),
-            ListTile(
-              title: Container(
-                height: 50,
                 color: Colors.amber[500],
-                child: const Center(child: Text('Circles')),
+                child: const Center(child: Text('Quadratic')),
               ),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
@@ -54,7 +47,7 @@ class _GeometryPageState extends State<GeometryPage> {
               title: Container(
                 height: 50,
                 color: Colors.amber[100],
-                child: const Center(child: Text('Squares')),
+                child: const Center(child: Text('Cubic')),
               ),
               onTap: () {
                 //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));

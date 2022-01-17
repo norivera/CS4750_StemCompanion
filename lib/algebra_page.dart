@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:steam_companion/cubic_info.dart';
+import 'package:steam_companion/factoring_quadratic.dart';
 import 'package:steam_companion/quadratic_info.dart';
 import './linear_info.dart';
 
@@ -29,8 +30,8 @@ class _AlgebraPageState extends State<AlgebraPage> {
             ListTile(
               title: Container(
                 height: 50,
-                color: Colors.amber[600],
-                child: const Center(child: Text('Linear')),
+                color: Colors.amber[400],
+                child: const Center(child: Text('Linear Functions')),
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear Functions')));
@@ -39,8 +40,18 @@ class _AlgebraPageState extends State<AlgebraPage> {
             ListTile(
               title: Container(
                 height: 50,
-                color: Colors.amber[500],
-                child: const Center(child: Text('Quadratic')),
+                color: Colors.amber[300],
+                child: const Center(child: Text('Factoring Quadratic Functions')),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const FactoringSquares(title: 'Subject: Quadratic Functions')));
+              },
+            ),
+            ListTile(
+              title: Container(
+                height: 50,
+                color: Colors.amber[200],
+                child: const Center(child: Text('Quadratic Functions')),
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const QuadraticPage(title: 'Subject: Quadratic Functions')));
