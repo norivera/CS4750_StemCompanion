@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:steam_companion/basic_trig_functions_page.dart';
+import 'package:steam_companion/law_of_page.dart';
+import 'package:steam_companion/trig_identities_page.dart';
 
 
 class TrigPage extends StatefulWidget {
@@ -27,10 +30,10 @@ class _TrigPageState extends State<TrigPage> {
               title: Container(
                 height: 50,
                 color: Colors.amber[600],
-                child: const Center(child: Text('The Basic Trig Functions')),
+                child: const Center(child: Text('Trig Fundamentals')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const TrigFunctions(title: 'Subject: Trig Fundamentals')));
               },
             ),
             ListTile(
@@ -40,17 +43,17 @@ class _TrigPageState extends State<TrigPage> {
                 child: const Center(child: Text('Trig Identities')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const TrigIdentities(title: 'Subject: Trigonometric Identities')));
               },
             ),
             ListTile(
               title: Container(
                 height: 50,
                 color: Colors.amber[100],
-                child: const Center(child: Text('Pythagorean Identities')),
+                child: const Center(child: Text('Law of Sine & Cosine')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const TrigLaw(title: 'Subject: Law of Sine & Cosine')));
               },
             ),
           ],

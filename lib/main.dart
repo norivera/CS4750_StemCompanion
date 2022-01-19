@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:steam_companion/calc_page.dart';
-import 'package:steam_companion/precal_page.dart';
 import 'package:steam_companion/trig_page.dart';
 import './algebra_page.dart';
 import './geometry_page.dart';
@@ -63,12 +62,6 @@ class MyHomePage extends StatelessWidget {
               title: const Text('Trigonometry'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const TrigPage(title: 'Trigonometry Page!')));
-              },
-            ),
-            ListTile(
-              title: const Text('Precalculus page'),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const PrecalculusPage(title: 'Precalculus Page!')));
               },
             ),
             ListTile(

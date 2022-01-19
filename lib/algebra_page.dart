@@ -44,7 +44,7 @@ class _AlgebraPageState extends State<AlgebraPage> {
                 child: const Center(child: Text('Factoring Quadratic Functions')),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const FactoringSquares(title: 'Subject: Quadratic Functions')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const FactoringSquares(title: 'Factoring Quadratic Functions')));
               },
             ),
             ListTile(

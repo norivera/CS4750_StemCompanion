@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:steam_companion/intergration_page.dart';
+import 'package:steam_companion/limits_derivatives_page.dart';
+import 'package:steam_companion/rules_of_derivatives_page.dart';
 
 
 class CalculusPage extends StatefulWidget {
@@ -27,30 +30,30 @@ class _CalculusPageState extends State<CalculusPage> {
               title: Container(
                 height: 50,
                 color: Colors.amber[600],
-                child: const Center(child: Text('Linear')),
+                child: const Center(child: Text('Limits & Derivatives')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LimitsDerivatives(title: 'Subject: Limits & Derivatives')));
               },
             ),
             ListTile(
               title: Container(
                 height: 50,
                 color: Colors.amber[500],
-                child: const Center(child: Text('Quadratic')),
+                child: const Center(child: Text('Rules for Derivatives')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const RulesForDerivatives(title: 'Subject: Rules for Derivatives')));
               },
             ),
             ListTile(
               title: Container(
                 height: 50,
                 color: Colors.amber[100],
-                child: const Center(child: Text('Cubic')),
+                child: const Center(child: Text('Basic Integration')),
               ),
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) => const LinearPage(title: 'Subject: Linear')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const RulesForIntegration(title: 'Subject: Integration')));
               },
             ),
           ],
