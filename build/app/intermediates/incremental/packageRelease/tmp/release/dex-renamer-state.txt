@@ -1,0 +1,4 @@
+#Tue Jan 18 16:53:35 PST 2022
+base.0=C\:\\Users\\noeri\\OneDrive\\Desktop\\stem_companion\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+cpp/edu/cs4750/noe/stemcompanion/steam_companion/BuildConfig.java
+ cpp.edu.cs4750.noe.stemcompanion.steam_companion.BuildConfig
